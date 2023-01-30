@@ -2,21 +2,31 @@
 
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="styles.css">
         <title>Chia-Han Chen's Resume</title>
-    </head>
+        <meta name="description" content="Chia-Han Chen's Resume">
 
-    <style>
-        section {
-            margin: 1%;
-        }
-    </style>
+        <style>
+            nav > a {
+                margin: 0 .5cm 0 0;
+            }
+    
+            h3 {
+                display: inline;
+            }
+    
+            .align_right {
+                float: right;
+            }
+        </style>
+    </head>
 
     <body>
         <header>
             <h1>Chia-Han Chen</h1>
             <p>
-                <a href="chc016@ucsd.edu">chc016@ucsd.edu</a> | (206) 953-5317
+                <a href="mailto:chc016@ucsd.edu">chc016@ucsd.edu</a> | <a href="tel:206-953-5317">206-953-5317</a>
             </p>
         </header>
 
@@ -24,7 +34,9 @@
             <a href="#about">ABOUT ME</a>
             <a href="#education">EDUCATION</a>
             <a href="#work">WORK EXPERIENCE</a>
-            <a href="#skills">SKILLS</a>
+            <a href="volunteer">VOLUNTEER EXPERIENCE</a>
+            <a href="#skills">TECHNICAL SKILLS</a>
+            <a href="#more">MORE ABOUT ME</a>
             <a href="#contact">CONTACT ME</a>
         </nav>
 
@@ -32,85 +44,313 @@
             <section id="about">
                 <h2>ABOUT ME</h2>
                 <hr>
-                <p>
-                    I am <b>Chia-Han Chen</b>. I am currently a student at <i>University of California San Diego</i>.
-                </p>
+                <template>
+                    <p>
+                        I am <strong>Chia-Han Chen</strong>. I am currently a computer science major student at <em>University of California San Diego</em>.
+                    </p>
+                </template>
             </section>
+
+            <br>
+
             <section id="education">
                 <h2>EDUCATION</h2>
                 <hr>
                 <div>
-                    <h3>University of California San Diego</h3>
+                    <h3>University of California San Diego</h3><span class="align_right">Expected March 2024</span>
                     <ul>
-                        <li>Major: Computer Science</li>
-                        <li>GPA: 3.916</li>
+                        <li>Bachelor of Science in Computer Science</li>
+                        <li>Cumulative GPA: 3.916/4.000</li>
+                        <li>Major GPA: 3.935/4.000</li>
                         <li> Relevent Courses:
-                            <ul>
-                                <li>CSE 12: Basic Data Structures and Object-Oriented Design</li>
-                                <li>CSE 15L: Software Tools and Techniques Laboratory</li>
-                                <li>CSE 20: Discrete Mathematics</li>
-                                <li>CSE 21: Mathematics for Algorithms and Systems</li>
-                                <li>CSE 30: Computer Organization and Systems Programming</li>
-                                <li>CSE 100: Advanced Data Structures</li>
-                                <li>CSE 101: Design and Analysis of Algorithms</li>
-                                <li>CSE 105: Theory of Computation</li>
-                                <li>CSE 110: Software Engineering</li>
-                                <li>CSE 120: Principles of Computer Operating Systems</li>
-                                <li>CSE 134B: Web Client Languages</li>
-                                <li>CSE 140: Components and Design Techniques for Digital Systems</li>
-                                <li>CSE 140L: Digital Systems Laboratory</li>
-                                <li>CSE 142: Introduction to Computer Architecture: A Software Perspective</li>
-                                <li>CSE 142L: Software Project for Computer Architecture</li>
-                                <li>MATH 183: Statistical Methods</li>
-                            </ul>
+                            <ol>
+                                <li>CSE 12: <i>Basic Data Structures and Object-Oriented Design</i></li>
+                                <li>CSE 15L: <i>Software Tools and Techniques Laboratory</i></li>
+                                <li>CSE 20: <i>Discrete Mathematics</i></li>
+                                <li>CSE 21: <i>Mathematics for Algorithms and Systems</i></li>
+                                <li>CSE 30: <i>Computer Organization and Systems Programming</i></li>
+                                <li>CSE 100: <i>Advanced Data Structures</i></li>
+                                <li>CSE 101: <i>Design and Analysis of Algorithms</i></li>
+                                <li>CSE 105: <i>Theory of Computation</i></li>
+                                <li>CSE 110: <i>Software Engineering</i></li>
+                                <li>CSE 120: <i>Principles of Computer Operating Systems</i> <b>(In Progress)</b></li>
+                                <li>CSE 134B: <i>Web Client Languages</i> <b>(In Progress)</b></li>
+                                <li>CSE 140: <i>Components and Design Techniques for Digital Systems</i></li>
+                                <li>CSE 140L: <i>Digital Systems Laboratory</i></li>
+                                <li>CSE 142: <i>Introduction to Computer Architecture: A Software Perspective</i></li>
+                                <li>CSE 142L: <i>Software Project for Computer Architecture</i></li>
+                                <li>MATH 183: <i>Statistical Methods</i> <b>(In Progress)</b></li>
+                            </ol>
                         </li>
                     </ul>
                 </div>
-    
+
+                <br>
+
                 <div>
-                    <h3>Seattle Central College</h3>
+                    <h3>Seattle Central College</h3><span class="align_right">June 2020</span>
                     <ul>
-                        <li>Major: Computer Science</li>
-                        <li>GPA: 3.89</li>
+                        <li>Bachelor of Science in Computer Science</li>
+                        <li>Cumulative GPA: 3.89/4.00</li>
                     </ul>
                 </div>
-    
             </section>
+
+            <br>
 
             <section id="work">
                 <h2>WORK EXPERIENCE</h2>
                 <hr>
                 <div> 
-                   <h3>books.com.tw - Software Tester</h3>
-                   <p>March 2021 - July 2021</p>
+                    <h3>books.com.tw - Software Tester</h3><span class="align_right">March 2021 - July 2021</span>
+                    <ul>
+                        <li>Conducted e-book App and website testing in various web browsers and operating systems.</li>
+                        <li>Analyzed the testing results and reported to development teams.</li>
+                    </ul>
                 </div>
+                
+                <br>
 
                 <div>
-                    <h3>Seattle Central College - Tutor</h3>
-                    <p>September 2020 - April 2020</p>
+                    <h3>Seattle Central College - Tutor</h3><span class="align_right">September 2020 - April 2020</span>
+                    <ul>
+                        <li>Provided students with effective one-on-one academic support to improve their comprehension.</li>
+                        <li>Assisted students with coursework in the applicable subject area.</li>
+                        <li>Tutored Subjects: Mathematics, Physics, Computer Science</li>
+                    </ul>
                 </div>
             </section>
 
+            <br>
+
+            <section id="volunteer">
+                <h2>VOLUNTEER EXPERIENCE</h2>
+                <hr>
+                <div>
+                    <h3>University of California San Diego, Office for Students with Disabilites - Note Taker</h3><span class="align_right">October 2021 - December 2021</span>
+                    <ul>
+                        <li>Provided legible, clear, and concise notes within 24 hours after each class meeting.</li>
+                        <li>Course: Discrete Mathematics (CSE 20)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <br>
+
             <section id="skills">
-                <h2>SKILLS</h2>
+                <h2>TECHNICAL SKILLS</h2>
                 <hr>
                 <ul>
-
+                    <li>Programming Languages: <code>C/C++</code>, <code>Java</code>, <code>Python</code>, <code>HTML</code>, <code>CSS</code>, <code>JavaScript</code>, <code>ARM Assembly</code>, <code>x86 Assembly</code></li>
+                    <li>Certificates:
+                        <ul>
+                            <li>Microsoft - Microsoft Office Specialist: Office Word 2013</li>
+                            <li>Stepik - Data Structures (<a href="https://stepik.org/cert/1561088" target="_blank" rel="noopener noreferrer">Credential</a>)</li>
+                            <li>Stepik - JacaScript for Beginners (<a href="https://stepik.org/cert/1362212" target="_blank" rel="noopener noreferrer">Credential</a>)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        LinkedIn Skill Assessments:
+                        <ul>
+                            <li>C</li>
+                            <li>Linux</li>
+                            <li>Microsoft Word</li>
+                        </ul>
+                    </li>
                 </ul>
             </section>
+
+            <br>
+
+            <section id="more">
+                <h2>MORE ABOUT ME</h2>
+                <hr>
+                <p>I am from <i>Taipei, Taiwan</i>. In addition to speaking English, I am a  native Mandarin speaker.</p>
+                <p>I like watching basketball and baseball.</p>
+                
+                <figure>
+                    <img src="media/picture_1.jpeg" alt="Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden" height="300">
+                    <figcaption>Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden. Photo by Chia-Han Chen</figcaption>
+                </figure>
+
+                <figure>
+                    <picture>
+                        <source srcset="media/picture_2.jpg" media="(orientation: portrait)">
+                        <img src="media/picture_2.jpg" alt="Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field" height="300">
+                    </picture>
+                    <figcaption>Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field</figcaption>
+                </figure>
+                
+                <video controls height="300">
+                    <source src="media/video_1.mp4">
+                    Your browser doesn't support the video element.
+                </video>
+
+                <figure>
+                    <figcaption>
+                        Audio from the Video:
+                    </figcaption>
+                    <audio controls src="media/audio_1.mp3">
+                        <a href="media/audio_1.mp3">Download Audio</a>
+                    </audio>
+                </figure>
+                
+                <p>I am also a Gold Coach certificated by USA Basketball. I had written articles at <a href="https://www.sportsv.net">sportsv.net</a>, a Chinese sports news and blog website from Taiwan.</p>
+                <aside>
+                    <p>Below is an article I wrote.</p>
+                    <iframe src="https://www.sportsv.net/articles/90978" title="An article I wrote" width="500" height="300"></iframe>
+                </aside>
+                <br>
+                <p>I have also played table tennis since I was 8. Currently, I am a member of club of table tennis at UCSD.</p>
+                
+                <canvas id="ball" width="30" height="50"></canvas>
+                <svg width="100" height="50">
+                    <circle cx="50" cy="25" r="20" stroke="black" stroke-width="2" fill="red" />
+                    <rect x="60" y="15" width="30" height="20" stroke="black" stroke-width="2" fill="brown" />
+                </svg>
+                <pre>(Drawn by canvas and svg)</pre>
+            </section>
+
+            <br>
 
             <section id="contact">
                 <h2>CONTACT ME</h2>
                 <hr>
+                <h3>Contact Information</h3>
+                <div>
+                    <p>Email: <a href="mailto:chc016@ucsd.edu">Send me an email here</a>  or send an email to chc016@ucsd.edu</p>
+                    <p>Phone: <a href="tel:206-953-5317">Call me here</a> or call 206-953-5317</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/chia-han-chen-998745224/" target="_blank" rel="noopener noreferrer">My LinkedIn Page</a> or access it at https://www.linkedin.com/in/chia-han-chen-998745224/</p>
+                </div>
+                
+                <details>
+                    <summary>Other ways to contact me</summary>
+                    <table>
+                        <caption>My Social Media Account</caption>
+                        <colgroup>
+                            <col>
+                            <col span="2">
+                        </colgroup>
+                        <tr>
+                            <th>Soical Media</th>
+                            <th>Name</th>
+                            <th>Link</th>
+                        </tr>
+                        <tr>
+                            <td>Instagram</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Facebook</td>
+                            <td>Chia-Han Chen</td>
+                            <td><a href="https://www.facebook.com/chen.chia.han.1019/">Link to my Facebook</a></td>
+                        </tr>
+                    </table>
+                </details>
+
+                <br>
+
+                <h3>Leave a Message</h3>
+                <div>
+                    <form action="/message.php" method="post" enctype="multipart/form-data">
+                        <fieldset>
+                            <legend>Your Message</legend>
+                            <label for="name">Name: </label>
+                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <br>
+                            <br>
+                            <label for="email">Email: </label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <br>
+                            <br>
+                            <label for="phone">Phone: </label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            <br>
+                            <br>
+                            <label for="date">Date: </label>
+                            <input type="date" id="date" name="date">
+                            <br>
+                            <br>
+                            <fieldset>
+                                <label>Do you want to be contacted?</label>
+                                <input type="radio" id="yes" name="be_contacted" value="yes">
+                                <label for="yes">Yes</label>
+                                <input type="radio" id="no" name="be_contacted" value="no">
+                                <label for="no">No</label>
+                                <br>
+                                <br>
+                                <label>Please select your preferred contact method: </label>
+                                <input type="checkbox" id="contact_email" name="contact_email" value="Email">
+                                <label for="contact_email">Email</label>
+                                <input type="checkbox" id="contact_phone" name="vehicontact_phonecle2" value="Phone">
+                                <label for="contact_phone">Phone</label>
+                                <br>
+                                <br>
+                                <label for="time_zone">What is your time zone?</label>
+                                <input list="time_zone_list" id="time_zone" name="time_zone">
+                                <datalist id="time_zone_list">
+                                    <option value="Hawaii">Hawaii</option>
+                                    <option value="Alaska">Alaska</option>
+                                    <option value="Pacific">Pacific</option>
+                                    <option value="Mountain">Mountain</option>
+                                    <option value="Central">Central</option>
+                                    <option value="Eastern">Eastern</option>
+                                    <option value="Other">Other</option>
+                                </datalist>
+                            </fieldset>
+                            <br>
+                            <label for="search">How do you know about this page?</label>
+                            <select id="search" name="search">
+                                <optgroup label="From the Internet">
+                                    <option label="Search Engine">Search Engine</option>
+                                    <option label="LinkedIn">LinkedIn</option>
+                                    <option label="Handshake">Handshake</option>
+                                    <option label="Social Media">Social Media</option>
+                                    <option label="Other">Other</option>
+                                </optgroup>
+                                <optgroup label="From Someone">
+                                    <option label="Professor">Professor</option>
+                                    <option label="Friends">Friends</option>
+                                    <option label="Other">Other</option>
+                                </optgroup>
+                                <optgroup label="Other">
+                                    <option label="Other">Other</option>
+                                </optgroup>
+                            </select>
+                            <br>
+                            <br>
+                            <label for="message">Message:</label>
+                            <br>
+                            <textarea id="message" cols="50" placeholder="Enter your message"></textarea>
+                            <br>
+                            <br>
+                            <label>Upload Files: <input type="file" name="file"></label>
+                            <br>
+                            <br>
+                            <button type="reset">Reset</button>
+                            <button type="submit">Submit</button>                         
+                        </fieldset>
+                    </form>
+                </div>
             </section>
         </main>
-    </body>
 
-    <footer>
-        <hr>
-        Created by Chia-Han Chen
-        <br>
-        Last Update: January 25 2023
-    </footer>
+        <footer>
+            <hr>
+            Created by Chia-Han Chen
+            <br>
+            Last Update: January 25 2023
+        </footer>
+
+        <script>
+            const canvas = document.getElementById ('ball');
+            const ball = canvas.getContext ('2d');
+    
+            ball.beginPath();
+            ball.arc(15, 30, 10, 0, 2 * Math.PI);
+            ball.stroke();
+        </script>
+    </body>
 
 </html>
