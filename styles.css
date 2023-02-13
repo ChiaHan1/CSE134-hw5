@@ -1,0 +1,291 @@
+/* CSS variable */
+:root {
+    --background-color: rgb(172, 222, 176);
+    --start-animation-time: 2s;
+}
+
+/* background color for the entir website */
+* {
+    background-color: var(--background-color);
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto 18%;
+    column-gap: 1%;
+}
+
+/* style for header */
+header {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+}
+
+/* animation for the name at the top */
+header h1 {
+    background-color:transparent;
+    animation-name: name;
+    animation-duration: var(--start-animation-time);
+    position: relative;
+}
+
+@keyframes name {
+    0% {left: 0vw; top: 50vh;transform: rotate(.25turn);cursor: progress;}
+    33% {left:-20vw; top:50vh;transform: rotate(.5turn);}
+    67% {left:20vw; top:50vh;transform: rotate(.75turn);}
+    100% {left:0vw; top:0vh;cursor: progress;}
+}
+
+/* animation for everything except for h1 */
+nav, main, header a, header p, footer {
+    animation-name: hide;
+    animation-duration: var(--start-animation-time);
+}
+
+@keyframes hide {
+    from {visibility: hidden;}
+    to {visibility: hidden;};
+}
+
+/* font for the links in header and navbar */
+header a, nav a {
+    font-family: Monospace, Arial, Helvetica, sans-serif;
+    font-size: large;
+}
+
+/* font color for the links in header */
+header a {
+    color: rgb(0, 0, 0);
+}
+
+/* style for navbar */
+nav {
+    background-color: green;
+    padding: 1%;
+    display: flex;
+    border-radius: .5rem;
+    justify-content: space-around;
+}
+
+nav > a {
+    background-color: green;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 .3% 0 .3%;
+    padding: 1%;
+    border-color: var(--background-color);
+    border-radius: .5rem;
+    border-style: solid;
+    color: white;
+}
+
+nav a:hover {
+    background-color: var(--background-color);
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+    text-shadow: 1px 4px 2px var(--background-color);
+}
+
+nav a:active {
+    background-color: black;
+    color: white;
+}
+
+/* style for the sidebar */
+#sidebar {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 7;
+    height: 100%;
+    position: -webkit-sticky; /* for Safari users */
+    position: sticky;
+    top: 0;
+    right: 0;
+    padding-top: 10vh;
+    padding-left: 3vw;
+}
+
+.sidebar_link {
+    text-decoration: none;
+    color: black;
+    line-height: 1.4lh;
+}
+
+h2 {
+    margin-block-end: 0;
+}
+
+h3 {
+    display: inline;
+}
+
+#multimedia {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+}
+
+figure {
+    text-align: center;
+}
+
+.text_input {
+    width: 30ch;
+}
+
+iframe {
+    width: 70%;
+    height: 60vh;
+}
+
+th, td {
+    border: .1em black solid;
+}
+
+table {
+    border: .1em black dashed;
+}
+
+/* animation for the ball */
+#ball {
+    background-color:transparent;
+    animation-name: rotate;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    position: relative;
+}
+
+@keyframes rotate {
+    0% {left:0; top:6vh;}
+    33% {left:6vw; top:2vh;}
+    67% {left:-10vw; top:-8vh;}
+    100% {left:0vw; top:3vh;}
+}
+
+input {
+    background-color: white;
+    color: black;
+}
+
+#file_upload {
+    background-color: transparent;
+}
+
+textarea {
+    background-color:white;
+    color: black;
+    width: 80%;
+}
+
+button {
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-left: 10px;
+    padding: 5px;
+}
+
+/* for smaller screens */
+@media only screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: .8ex;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sidebar {
+        display: none;
+    }
+
+    img {
+        height: 480px;
+    }
+
+    video {
+        width: 360px;
+        height: 480px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 2.5em; 
+    }
+
+    header a {
+        font-size: x-large;
+    }
+    
+    body {
+      line-height: 1.4;
+    }
+
+    section * {
+        font-size: medium;
+    }
+
+    h2 {
+        font-size: large;
+    }
+
+    .align_right {
+        float: right;
+        font-size: medium;
+    }
+
+    #courses * {
+        font-size: small;
+    }
+
+    img {
+        height: 360px;
+    }
+
+    video {
+        width: 240px;
+        height: 360px;
+    }
+}
+
+
+/* for printing */
+@media print {
+    * {
+        background-color: white;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+
+    nav a {
+        font-family: Monospace;
+        font-size: small;
+        margin: .8ex;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sidebar {
+        display: none;
+    }
+}

@@ -6,16 +6,9 @@
         <link rel="stylesheet" href="styles.css">
         <title>Chia-Han Chen's Resume</title>
         <meta name="description" content="Chia-Han Chen's Resume">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
         <style>
-            nav > a {
-                margin: 0 .5cm 0 0;
-            }
-    
-            h3 {
-                display: inline;
-            }
-    
             .align_right {
                 float: right;
             }
@@ -30,17 +23,40 @@
             </p>
         </header>
 
-        <nav>
+        <nav id="navbar">
             <a href="#about">ABOUT ME</a>
             <a href="#education">EDUCATION</a>
             <a href="#work">WORK EXPERIENCE</a>
-            <a href="volunteer">VOLUNTEER EXPERIENCE</a>
+            <a href="#volunteer">VOLUNTEER EXPERIENCE</a>
             <a href="#skills">TECHNICAL SKILLS</a>
             <a href="#more">MORE ABOUT ME</a>
-            <a href="#contact">CONTACT ME</a>
+            <a href="#contact">CONTACT ME</a>            
         </nav>
 
         <main>
+            <section id="sidebar">
+                <div>
+                    <h3>Connact</h3>
+                    <hr>
+                    <a class="sidebar_link" href="mailto:chc016@ucsd.edu">Email</a>
+                    <br>
+                    <a class="sidebar_link" href="tel:206-953-5317">Phone</a>
+                </div>
+
+                <br>
+                <br>
+                
+                <div>
+                    <h3>Connect</h3>
+                    <hr>
+                    <a class="sidebar_link" href="https://www.linkedin.com/in/chia-han-chen-998745224/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <br>
+                    <a class="sidebar_link" href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">Instagram</a>
+                    <br>
+                    <a class="sidebar_link" href="https://www.facebook.com/chen.chia.han.1019/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                </div>
+            </section>
+
             <section id="about">
                 <h2>ABOUT ME</h2>
                 <hr>
@@ -64,7 +80,7 @@
                         <li>Cumulative GPA: 3.916/4.000</li>
                         <li>Major GPA: 3.935/4.000</li>
                         <li> Relevent Courses:
-                            <ol>
+                            <ol id="courses">
                                 <li>CSE 12: <i>Basic Data Structures and Object-Oriented Design</i></li>
                                 <li>CSE 15L: <i>Software Tools and Techniques Laboratory</i></li>
                                 <li>CSE 20: <i>Discrete Mathematics</i></li>
@@ -168,33 +184,32 @@
                 <hr>
                 <p>I am from <i>Taipei, Taiwan</i>. In addition to speaking English, I am a  native Mandarin speaker.</p>
                 <p>I like watching basketball and baseball.</p>
-                
-                <figure>
-                    <img src="media/picture_1.jpeg" alt="Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden" height="300">
-                    <figcaption>Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden. Photo by Chia-Han Chen</figcaption>
-                </figure>
 
-                <figure>
-                    <picture>
-                        <source srcset="media/picture_2.jpg" media="(orientation: portrait)">
-                        <img src="media/picture_2.jpg" alt="Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field" height="300">
-                    </picture>
-                    <figcaption>Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field</figcaption>
-                </figure>
-                
-                <video width="320" height="240" controls>
-                    <source src="media/video_1.mp4" type="video/mp4">
-                    Your browser doesn't support the video element.
-                </video>
+                <div id="multimedia">
+                    <figure>
+                        <picture>
+                            <img src="media/picture_1.webp" alt="Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden" height="680">
+                        </picture>
+                        <figcaption>Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden. Photo by Chia-Han Chen</figcaption>
+                    </figure>
 
-                <figure>
-                    <figcaption>
-                        Audio from the Video:
-                    </figcaption>
-                    <audio src="media/audio_1.mp3" controls>
-                        <a href="media/audio_1.mp3">Download Audio</a>
-                    </audio>
-                </figure>
+                    <figure>
+                        <video width="500" height="680" controls>
+                            <source src="media/video_1.mp4" type="video/mp4">
+                            Your browser doesn't support the video element.
+                        </video>
+                        <figcaption>Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden. Photo by Chia-Han Chen</figcaption>
+                    </figure>
+                    
+                    <figure>
+                        <picture>
+                            <source srcset="" media="(orientation: portrait)">
+                            <img src="media/picture_2.webp" alt="Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field" height="680">
+                        </picture>
+                        <figcaption>Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field</figcaption>
+                    </figure>
+                    
+                </div>
                 
                 <p>I am also a Gold Coach certificated by USA Basketball. I had written articles at <a href="https://www.sportsv.net">sportsv.net</a>, a Chinese sports news and blog website from Taiwan.</p>
                 <aside>
@@ -204,10 +219,10 @@
                 <br>
                 <p>I have also played table tennis since I was 8. Currently, I am a member of club of table tennis at UCSD.</p>
                 
-                <canvas id="ball" width="30" height="50"></canvas>
-                <svg width="100" height="50">
-                    <circle cx="50" cy="25" r="20" stroke="black" stroke-width="2" fill="red" />
-                    <rect x="60" y="15" width="30" height="20" stroke="black" stroke-width="2" fill="brown" />
+                <canvas id="ball" width="30" height="100"></canvas>
+                <svg width="200" height="100">
+                    <circle cx="70" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+                    <rect x="90" y="38" width="55" height="30" stroke="black" stroke-width="2" fill="brown" />
                 </svg>
                 <pre>(Drawn by canvas and svg)</pre>
             </section>
@@ -240,12 +255,12 @@
                         <tr>
                             <td>Instagram</td>
                             <td>chiahan.chen</td>
-                            <td><a href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=">Link to my Instagram</a></td>
+                            <td><a href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">Link to my Instagram</a></td>
                         </tr>
                         <tr>
                             <td>Facebook</td>
                             <td>Chia-Han Chen</td>
-                            <td><a href="https://www.facebook.com/chen.chia.han.1019/">Link to my Facebook</a></td>
+                            <td><a href="https://www.facebook.com/chen.chia.han.1019/" target="_blank" rel="noopener noreferrer">Link to my Facebook</a></td>
                         </tr>
                     </table>
                 </details>
@@ -258,15 +273,15 @@
                         <fieldset>
                             <legend>Your Message</legend>
                             <label for="name">Name: </label>
-                            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                            <input class="text_input" type="text" id="name" name="name" placeholder="Enter your name" required>
                             <br>
                             <br>
                             <label for="email">Email: </label>
-                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <input class="text_input" type="email" id="email" name="email" placeholder="Enter your email" required>
                             <br>
                             <br>
                             <label for="phone">Phone: </label>
-                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+                            <input class="text_input" type="tel" id="phone" name="phone" placeholder="Enter your phone number">
                             <br>
                             <br>
                             <label for="date">Date: </label>
@@ -301,32 +316,13 @@
                                 </datalist>
                             </fieldset>
                             <br>
-                            <label for="search">How do you know about this page?</label>
-                            <select id="search" name="search">
-                                <optgroup label="From the Internet">
-                                    <option label="Search Engine">Search Engine</option>
-                                    <option label="LinkedIn">LinkedIn</option>
-                                    <option label="Handshake">Handshake</option>
-                                    <option label="Social Media">Social Media</option>
-                                    <option label="Other">Other</option>
-                                </optgroup>
-                                <optgroup label="From Someone">
-                                    <option label="Professor">Professor</option>
-                                    <option label="Friends">Friends</option>
-                                    <option label="Other">Other</option>
-                                </optgroup>
-                                <optgroup label="Other">
-                                    <option label="Other">Other</option>
-                                </optgroup>
-                            </select>
-                            <br>
                             <br>
                             <label for="message">Message:</label>
                             <br>
-                            <textarea id="message" cols="50" placeholder="Enter your message"></textarea>
+                            <textarea id="message" placeholder="Enter your message"></textarea>
                             <br>
                             <br>
-                            <label>Upload Files: <input type="file" name="file"></label>
+                            <label>Upload Files: <input id="file_upload" type="file" name="file"></label>
                             <br>
                             <br>
                             <button type="reset">Reset</button>
@@ -339,7 +335,7 @@
 
         <footer>
             <hr>
-            Created by Chia-Han Chen
+            &copy; Created by Chia-Han Chen
             <br>
             Last Update: January 25 2023
         </footer>
@@ -351,6 +347,8 @@
             ball.beginPath();
             ball.arc(15, 30, 10, 0, 2 * Math.PI);
             ball.stroke();
+            ball.fillStyle = "white";
+            ball.fill();
         </script>
     </body>
 
