@@ -17,46 +17,22 @@
 
     <body>
         <header>
-            <h1>Chia-Han Chen</h1>
-            <p>
-                <a href="mailto:chc016@ucsd.edu">chc016@ucsd.edu</a> | <a href="tel:206-953-5317">206-953-5317</a>
-            </p>
+            <h1><a href="#">Chia-Han Chen</a></h1>
+
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
+                    <li><a href="#work">WORK EXPERIENCE</a></li>
+                    <li><a href="#volunteer">VOLUNTEER EXPERIENCE</a></li>
+                    <li><a href="#skills">TECHNICAL SKILLS</a></li>
+                    <li><a href="#more">MORE ABOUT ME</a></li>
+                    <li><a href="#contact">CONTACT ME</a></li>
+                </ul> 
+            </nav>
         </header>
 
-        <nav id="navbar">
-            <a href="#about">ABOUT ME</a>
-            <a href="#education">EDUCATION</a>
-            <a href="#work">WORK EXPERIENCE</a>
-            <a href="#volunteer">VOLUNTEER EXPERIENCE</a>
-            <a href="#skills">TECHNICAL SKILLS</a>
-            <a href="#more">MORE ABOUT ME</a>
-            <a href="#contact">CONTACT ME</a>            
-        </nav>
-
         <main>
-            <section id="sidebar">
-                <div>
-                    <h3>Connact</h3>
-                    <hr>
-                    <a class="sidebar_link" href="mailto:chc016@ucsd.edu">Email</a>
-                    <br>
-                    <a class="sidebar_link" href="tel:206-953-5317">Phone</a>
-                </div>
-
-                <br>
-                <br>
-                
-                <div>
-                    <h3>Connect</h3>
-                    <hr>
-                    <a class="sidebar_link" href="https://www.linkedin.com/in/chia-han-chen-998745224/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <br>
-                    <a class="sidebar_link" href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    <br>
-                    <a class="sidebar_link" href="https://www.facebook.com/chen.chia.han.1019/" target="_blank" rel="noopener noreferrer">Facebook</a>
-                </div>
-            </section>
-
             <section id="about">
                 <h2>ABOUT ME</h2>
                 <hr>
@@ -79,7 +55,7 @@
                         <li>Bachelor of Science in Computer Science</li>
                         <li>Cumulative GPA: 3.916/4.000</li>
                         <li>Major GPA: 3.935/4.000</li>
-                        <li> Relevent Courses:
+                        <li>Courses:
                             <ol id="courses">
                                 <li>CSE 12: <i>Basic Data Structures and Object-Oriented Design</i></li>
                                 <li>CSE 15L: <i>Software Tools and Techniques Laboratory</i></li>
@@ -120,21 +96,29 @@
                 <hr>
                 <div> 
                     <h3>books.com.tw - Software Tester</h3><span class="align_right">March 2021 - July 2021</span>
-                    <ul>
-                        <li>Conducted e-book App and website testing in various web browsers and operating systems.</li>
-                        <li>Analyzed the testing results and reported to development teams.</li>
-                    </ul>
+                    <br>
+                    <div class="job_description">
+                        <img src="media/books.webp" alt="Logo of books.com.tw" width="50" class="logo">
+                        <ul>
+                            <li>Conducted e-book App and website testing in various web browsers and operating systems.</li>
+                            <li>Analyzed the testing results and reported to development teams.</li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <br>
 
                 <div>
                     <h3>Seattle Central College - Tutor</h3><span class="align_right">September 2020 - April 2020</span>
-                    <ul>
-                        <li>Provided students with effective one-on-one academic support to improve their comprehension.</li>
-                        <li>Assisted students with coursework in the applicable subject area.</li>
-                        <li>Tutored Subjects: Mathematics, Physics, Computer Science</li>
-                    </ul>
+                    <br>
+                    <div class="job_description">
+                        <img src="media/scc.webp" alt="Logo of Seattle Central College" width="50" class="logo">
+                        <ul>
+                            <li>Provided students with effective one-on-one academic support to improve their comprehension.</li>
+                            <li>Assisted students with coursework in the applicable subject area.</li>
+                            <li>Tutored Subjects: Mathematics, Physics, Computer Science</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -162,8 +146,8 @@
                     <li>Certificates:
                         <ul>
                             <li>Microsoft - Microsoft Office Specialist: Office Word 2013</li>
-                            <li>Stepik - Data Structures (<a href="https://stepik.org/cert/1561088" target="_blank" rel="noopener noreferrer">Credential</a>)</li>
-                            <li>Stepik - JacaScript for Beginners (<a href="https://stepik.org/cert/1362212" target="_blank" rel="noopener noreferrer">Credential</a>)</li>
+                            <li>Stepik - Data Structures (<a href="https://stepik.org/cert/1561088" target="_blank" rel="noopener noreferrer" class="Credential">Credential</a>)</li>
+                            <li>Stepik - JacaScript for Beginners (<a href="https://stepik.org/cert/1362212" target="_blank" rel="noopener noreferrer" class="Credential">Credential</a>)</li>
                         </ul>
                     </li>
                     <li>
@@ -182,49 +166,46 @@
             <section id="more">
                 <h2>MORE ABOUT ME</h2>
                 <hr>
-                <p>I am from <i>Taipei, Taiwan</i>. In addition to speaking English, I am a  native Mandarin speaker.</p>
-                <p>I like watching basketball and baseball.</p>
+                <details>
+                    <summary>Know More About Me</summary>
+                    <p>I am from <i>Taipei, Taiwan</i>. In addition to speaking English, I am a  native Mandarin speaker.</p>
+                    <p>I like watching basketball and baseball.</p>
 
-                <div id="multimedia">
-                    <figure>
-                        <picture>
-                            <img src="media/picture_1.webp" alt="Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden" height="680">
-                        </picture>
-                        <figcaption>Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden. Photo by Chia-Han Chen</figcaption>
-                    </figure>
-
-                    <figure>
-                        <video width="500" height="680" controls>
-                            <source src="media/video_1.mp4" type="video/mp4">
-                            Your browser doesn't support the video element.
-                        </video>
-                        <figcaption>Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden. Photo by Chia-Han Chen</figcaption>
-                    </figure>
+                    <div id="multimedia">
+                        <figure>
+                            <picture>
+                                <img src="media/picture_1.webp" alt="Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden" height="480" loading="lazy">
+                            </picture>
+                            <figcaption>Dec 21, 2022. Boston Celtics vs. Indiana Pacers at TD Garden. Photo by Chia-Han Chen</figcaption>
+                        </figure>
                     
-                    <figure>
-                        <picture>
-                            <source srcset="" media="(orientation: portrait)">
-                            <img src="media/picture_2.webp" alt="Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field" height="680">
-                        </picture>
-                        <figcaption>Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field</figcaption>
-                    </figure>
+                        <figure>
+                            <picture>
+                                <source srcset="media/picture_2.webp" media="(orientation: portrait)">
+                                <img src="media/picture_2.webp" alt="Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field" height="360" loading="lazy">
+                            </picture>
+                            <figcaption>Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field</figcaption>
+                        </figure>
                     
-                </div>
+                    </div>
                 
-                <p>I am also a Gold Coach certificated by USA Basketball. I had written articles at <a href="https://www.sportsv.net">sportsv.net</a>, a Chinese sports news and blog website from Taiwan.</p>
-                <aside>
-                    <p>Below is an article I wrote.</p>
-                    <iframe src="https://www.sportsv.net/articles/90978" title="An article I wrote" width="500" height="300"></iframe>
-                </aside>
-                <br>
-                <p>I have also played table tennis since I was 8. Currently, I am a member of club of table tennis at UCSD.</p>
-                
-                <canvas id="ball" width="30" height="100"></canvas>
-                <svg width="200" height="100">
-                    <circle cx="70" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
-                    <rect x="90" y="38" width="55" height="30" stroke="black" stroke-width="2" fill="brown" />
-                </svg>
-                <pre>(Drawn by canvas and svg)</pre>
+                    <p>I am also a Gold Coach certificated by USA Basketball. I had written articles at <a href="https://www.sportsv.net">sportsv.net</a>, a Chinese sports news and blog website from Taiwan.</p>
+                    <aside>
+                        <p>Below is an article I wrote. (<a href="https://www.sportsv.net/articles/90978">Link to it</a>)</p>
+                        <iframe src="https://www.sportsv.net/articles/90978" title="An article I wrote" width="500" height="300"></iframe>
+                    </aside>
+                    <br>
+                    <p>I have also played table tennis since I was 8. Currently, I am a member of club of table tennis at UCSD.</p>
+                    <div id="table_tennis">
+                        <pre>Move your mouse here</pre>
+                        <canvas id="ball" width="30" height="100"></canvas>
+                        <svg width="200" height="100">
+                            <circle cx="70" cy="50" r="40" stroke="black" stroke-width="2" fill="red" />
+                            <rect x="90" y="38" width="55" height="30" stroke="black" stroke-width="2" fill="brown" />
+                        </svg>
+                        <pre>(Drawn by canvas and svg)</pre>
+                    </div>
+                </details>
             </section>
 
             <br>
@@ -234,9 +215,9 @@
                 <hr>
                 <h3>Contact Information</h3>
                 <div>
-                    <p>Email: <a href="mailto:chc016@ucsd.edu">Send me an email here</a>  or send an email to chc016@ucsd.edu</p>
-                    <p>Phone: <a href="tel:206-953-5317">Call me here</a> or call 206-953-5317</p>
-                    <p>LinkedIn: <a href="https://www.linkedin.com/in/chia-han-chen-998745224/" target="_blank" rel="noopener noreferrer">My LinkedIn Page</a> or access it at https://www.linkedin.com/in/chia-han-chen-998745224/</p>
+                    <p>Email: <a href="mailto:chc016@ucsd.edu" class="contact_link">Send me an email here</a>  or send an email to chc016@ucsd.edu</p>
+                    <p>Phone: <a href="tel:206-953-5317" class="contact_link">Call me here</a> or call 206-953-5317</p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/chia-han-chen-998745224/" target="_blank" rel="noopener noreferrer" class="contact_link">My LinkedIn Page</a> or access it at https://www.linkedin.com/in/chia-han-chen-998745224/</p>
                 </div>
                 
                 <details>
@@ -255,12 +236,12 @@
                         <tr>
                             <td>Instagram</td>
                             <td>chiahan.chen</td>
-                            <td><a href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">Link to my Instagram</a></td>
+                            <td><a href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer" class="contact_link">Link to my Instagram</a></td>
                         </tr>
                         <tr>
                             <td>Facebook</td>
                             <td>Chia-Han Chen</td>
-                            <td><a href="https://www.facebook.com/chen.chia.han.1019/" target="_blank" rel="noopener noreferrer">Link to my Facebook</a></td>
+                            <td><a href="https://www.facebook.com/chen.chia.han.1019/" target="_blank" rel="noopener noreferrer" class="contact_link">Link to my Facebook</a></td>
                         </tr>
                     </table>
                 </details>
@@ -332,6 +313,29 @@
                 </div>
             </section>
         </main>
+
+        <aside id="sidebar">
+            <div>
+                <h3>Connact</h3>
+                <hr>
+                <a class="contact_link" href="mailto:chc016@ucsd.edu">Email</a>
+                <br>
+                <a class="contact_link" href="tel:206-953-5317">Phone</a>
+            </div>
+
+            <br>
+            <br>
+            
+            <div>
+                <h3>Connect</h3>
+                <hr>
+                <a class="contact_link" href="https://www.linkedin.com/in/chia-han-chen-998745224/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <br>
+                <a class="contact_link" href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <br>
+                <a class="contact_link" href="https://www.facebook.com/chen.chia.han.1019/" target="_blank" rel="noopener noreferrer">Facebook</a>
+            </div>
+        </aside>
 
         <footer>
             <hr>
