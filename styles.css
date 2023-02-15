@@ -35,12 +35,10 @@ header {
     justify-self: center;
     align-self: center;
     font-size: x-large;
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
     background-color: var(--navbar-background-color);
-    border-bottom: .1em var(--navbar-background-color) dashed;
 }
 
 /* animation for the name at the top */
@@ -80,7 +78,7 @@ header, #navbar, main, footer, #sidebar {
 
 @keyframes hide {
     from {visibility: hidden;}
-    to {visibility: hidden;};
+    to {visibility: hidden;}
 }
 
 /* style for navbar */
@@ -94,7 +92,6 @@ header, #navbar, main, footer, #sidebar {
     border-radius: .5rem;
     align-self: center;
     justify-content: space-around;
-    justify-self: space-around;
 }
 
 #navbar ul {
