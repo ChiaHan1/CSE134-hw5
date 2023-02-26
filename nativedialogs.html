@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Dialogs</title>
+        <script src="/DOMPurify-3.0.0/dist/purify.js"></script>
+    </head>
+
+    <body>
+        <h1>Simple Dialogs?</h1>
+        
+        <input type="button" id="alert" name="alert" value="Alert">
+        <input type="button" id="confirm" name="confirm" value="Confirm">
+        <input type="button" id="prompt" name="prompt" value="Prompt">
+        <input type="button" id="simple_prompt" name="simple_prompt" value="Simple Prompt">
+            
+        <hr>
+        <br>
+
+        <output></output>
+       
+    </body>
+
+    <script>
+        window.addEventListener ('DOMContentLoaded', init);
+
+        function init () {
+            const alert_btn = document.getElementById ('alert');
+            const confirm_btn = document.getElementById ('confirm');
+            const prompt_btn = document.getElementById ('prompt');
+            const simple_prompt_btn = document.getElementById ('simple_prompt');
+            const output_box = document.querySelector ('output');
+
+            alert_btn.addEventListener ('click', () => {
+                alert ('Alert pressed!');
+            });
+
+            confirm_btn.addEventListener ('click', () => {
+                let confirm_result = confirm ('Do you confirm this?');
+                output_box.style.border = '5px double black';
+                output_box.style.padding = '5px';
+                output_box.textContent = `The value returned by the confirm method is: ${confirm_result}`;
+            });
+
+            prompt_btn.addEventListener ('click', () => {
+                let user_input = prompt ('Enter your prompt');
+
+                if (user_input == "" || user_input == null) {
+                    output_box.style.border = '5px double black';
+                    output_box.style.padding = '5px';
+                    output_box.innerHTML = "User didn’t enter anything";
+                }
+                else {
+                    output_box.style.border = '5px double black';
+                    output_box.style.padding = '5px';
+                    output_box.innerHTML = `The value returned by the prompt method is: ${user_input}`;
+                }
+            });
+
+            simple_prompt_btn.addEventListener ('click', () => {
+                let user_input = DOMPurify.sanitize (prompt ('Enter your prompt'));
+                if (user_input == "" || user_input == null) {
+                    output_box.style.border = '5px double black';
+                    output_box.style.padding = '5px';
+                    output_box.innerHTML = "User didn’t enter anything";
+                }
+                else {
+                    output_box.style.border = '5px double black';
+                    output_box.style.padding = '5px';
+                    output_box.innerHTML = `The value returned by the prompt method is: ${user_input}`;
+                }
+            })
+            
+        }
+    </script>
+</html>
