@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Custom Dialogs</title>
+        <script src="/DOMPurify-3.0.0/dist/purify.js"></script>
+    </head>
+
+    <body>
+        <h1>Custom Dialogs?</h1>
+        
+        <input type="button" id="alert" name="alert" value="Alert">
+        <input type="button" id="confirm" name="confirm" value="Confirm">
+        <input type="button" id="prompt" name="prompt" value="Prompt">
+        <input type="button" id="simple_prompt" name="simple_prompt" value="Simple Prompt">
+            
+        <hr>
+        <br>
+
+        <output></output>
+       
+    </body>
+
+    <script type="module">
+        import {alert_btn, confirm_btn, prompt_btn, simple_prompt_btn} from "./customdialog.js";
+    </script>
+</html>

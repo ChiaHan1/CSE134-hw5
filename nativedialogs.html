@@ -40,7 +40,7 @@
                 let confirm_result = confirm ('Do you confirm this?');
                 output_box.style.border = '5px double black';
                 output_box.style.padding = '5px';
-                output_box.textContent = `The value returned by the confirm method is: ${confirm_result}`;
+                output_box.innerText = `The value returned by the confirm method is: ${confirm_result}`;
             });
 
             prompt_btn.addEventListener ('click', () => {
@@ -60,6 +60,7 @@
 
             simple_prompt_btn.addEventListener ('click', () => {
                 let user_input = DOMPurify.sanitize (prompt ('Enter your prompt'));
+
                 if (user_input == "" || user_input == null) {
                     output_box.style.border = '5px double black';
                     output_box.style.padding = '5px';
