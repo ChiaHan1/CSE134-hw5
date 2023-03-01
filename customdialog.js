@@ -4,7 +4,7 @@ const prompt_btn = document.getElementById ('prompt');
 const simple_prompt_btn = document.getElementById ('simple_prompt');
 
 alert_btn.addEventListener ('click', () => {
-    const custom_dialog = document.createElement ("dialog");
+    const custom_dialog = document.createElement ('dialog');
 
     const message = document.createElement ('p');
     message.textContent = 'Alert pressed!';
@@ -24,7 +24,7 @@ alert_btn.addEventListener ('click', () => {
 });
 
 confirm_btn.addEventListener ('click', () => {
-    const custom_dialog = document.createElement ("dialog");
+    const custom_dialog = document.createElement ('dialog');
 
     const message = document.createElement ('p');
     message.textContent = 'Do you confirm this?';
@@ -63,7 +63,7 @@ confirm_btn.addEventListener ('click', () => {
 });
 
 prompt_btn.addEventListener ('click', () => {
-    const custom_dialog = document.createElement ("dialog");
+    const custom_dialog = document.createElement ('dialog');
 
     const message = document.createElement ('label');
     message.textContent = 'Enter your prompt';
@@ -118,7 +118,7 @@ prompt_btn.addEventListener ('click', () => {
 });
 
 simple_prompt_btn.addEventListener ('click', () => {
-    const custom_dialog = document.createElement ("dialog");
+    const custom_dialog = document.createElement ('dialog');
 
     const message = document.createElement ('label');
     message.textContent = 'Enter your prompt';
