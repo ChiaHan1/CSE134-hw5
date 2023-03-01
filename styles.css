@@ -15,6 +15,7 @@ body {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
+    background-color: rgba(172, 222, 176, .5);
 }
 
 /* background color for the entir website */
@@ -279,6 +280,7 @@ button {
     bottom: 30vh;
     right: 0;
     margin-top: 10vh;
+    margin-right: 2vw;
     padding-left: 3vw;
 }
 

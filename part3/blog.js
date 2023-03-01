@@ -15,6 +15,9 @@ function init () {
     if (posts.length == 0) {
         empty_list.style.display = 'inline-block';
     }
+    else {
+        empty_list.style.display = 'none';
+    }
 
     // get the list of posts from the document
     const list = document.getElementById ('list');
@@ -511,7 +514,6 @@ function deletePostHandler (deleted_post, deleted_post_li) {
          * if no posts left in the list, display the message
          */
         const empty_list = document.getElementById ('empty');
-        console.log (posts.length);
         if (posts.length == 0) {
             empty_list.style.display = 'inline-block';
         }
