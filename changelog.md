@@ -20,4 +20,4 @@
   - Added some icons to the content of the page
   - Updated the content of the page
   - Updated the footer
-- Added Google Analytics to the profolio website
+- Added Google Analytics
