@@ -13,13 +13,28 @@
                 float: right;
             }
         </style>
+        <script src="main.js" type="module"></script>
     </head>
 
     <body>
         <header>
             <h1><a href="#">Chia-Han Chen</a></h1>
 
+            <button type="button" id="hamburger_menu"> ☰ </button>
+            
             <nav id="navbar">
+                <ul>
+                    <li><a href="#about">ABOUT ME</a></li>
+                    <li><a href="#education">EDUCATION</a></li>
+                    <li><a href="#work">WORK EXPERIENCE</a></li>
+                    <li><a href="#volunteer">VOLUNTEER EXPERIENCE</a></li>
+                    <li><a href="#skills">TECHNICAL SKILLS</a></li>
+                    <li><a href="#more">MORE ABOUT ME</a></li>
+                    <li><a href="#contact">CONTACT ME</a></li>
+                </ul> 
+            </nav>
+
+            <nav id="hamburger_navbar">
                 <ul>
                     <li><a href="#about">ABOUT ME</a></li>
                     <li><a href="#education">EDUCATION</a></li>
@@ -55,25 +70,28 @@
                         <li>Bachelor of Science in Computer Science</li>
                         <li>Cumulative GPA: 3.916/4.000</li>
                         <li>Major GPA: 3.935/4.000</li>
-                        <li>Courses:
-                            <ol id="courses">
-                                <li>CSE 12: <i>Basic Data Structures and Object-Oriented Design</i></li>
-                                <li>CSE 15L: <i>Software Tools and Techniques Laboratory</i></li>
-                                <li>CSE 20: <i>Discrete Mathematics</i></li>
-                                <li>CSE 21: <i>Mathematics for Algorithms and Systems</i></li>
-                                <li>CSE 30: <i>Computer Organization and Systems Programming</i></li>
-                                <li>CSE 100: <i>Advanced Data Structures</i></li>
-                                <li>CSE 101: <i>Design and Analysis of Algorithms</i></li>
-                                <li>CSE 105: <i>Theory of Computation</i></li>
-                                <li>CSE 110: <i>Software Engineering</i></li>
-                                <li>CSE 120: <i>Principles of Computer Operating Systems</i> <b>(In Progress)</b></li>
-                                <li>CSE 134B: <i>Web Client Languages</i> <b>(In Progress)</b></li>
-                                <li>CSE 140: <i>Components and Design Techniques for Digital Systems</i></li>
-                                <li>CSE 140L: <i>Digital Systems Laboratory</i></li>
-                                <li>CSE 142: <i>Introduction to Computer Architecture: A Software Perspective</i></li>
-                                <li>CSE 142L: <i>Software Project for Computer Architecture</i></li>
-                                <li>MATH 183: <i>Statistical Methods</i> <b>(In Progress)</b></li>
-                            </ol>
+                        <li>
+                            <details>
+                            <summary>Courses:</summary>
+                                <ol id="courses">
+                                    <li class="class">CSE 12: <i>Basic Data Structures and Object-Oriented Design</i></li>
+                                    <li class="class">CSE 15L: <i>Software Tools and Techniques Laboratory</i></li>
+                                    <li class="class">CSE 20: <i>Discrete Mathematics</i></li>
+                                    <li class="class">CSE 21: <i>Mathematics for Algorithms and Systems</i></li>
+                                    <li class="class">CSE 30: <i>Computer Organization and Systems Programming</i></li>
+                                    <li class="class">CSE 100: <i>Advanced Data Structures</i></li>
+                                    <li class="class">CSE 101: <i>Design and Analysis of Algorithms</i></li>
+                                    <li class="class">CSE 105: <i>Theory of Computation</i></li>
+                                    <li class="class">CSE 110: <i>Software Engineering</i></li>
+                                    <li class="class">CSE 120: <i>Principles of Computer Operating Systems</i> <b>(In Progress)</b></li>
+                                    <li class="class">CSE 134B: <i>Web Client Languages</i> <b>(In Progress)</b></li>
+                                    <li class="class">CSE 140: <i>Components and Design Techniques for Digital Systems</i></li>
+                                    <li class="class">CSE 140L: <i>Digital Systems Laboratory</i></li>
+                                    <li class="class">CSE 142: <i>Introduction to Computer Architecture: A Software Perspective</i></li>
+                                    <li class="class">CSE 142L: <i>Software Project for Computer Architecture</i></li>
+                                    <li class="class">MATH 183: <i>Statistical Methods</i> <b>(In Progress)</b></li>
+                                </ol>
+                            </details>
                         </li>
                     </ul>
                 </div>
@@ -129,10 +147,13 @@
                 <hr>
                 <div>
                     <h3>University of California San Diego, Office for Students with Disabilites - Note Taker</h3><span class="align_right">October 2021 - December 2021</span>
-                    <ul>
-                        <li>Provided legible, clear, and concise notes within 24 hours after each class meeting.</li>
-                        <li>Course: Discrete Mathematics (CSE 20)</li>
-                    </ul>
+                    <div class="job_description">
+                        <img src="media/ucsd.webp" alt="Logo of University of California San Diego" width="50" class="logo">
+                        <ul>
+                            <li>Provided legible, clear, and concise notes within 24 hours after each class meeting.</li>
+                            <li>Course: Discrete Mathematics (CSE 20)</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
@@ -182,9 +203,9 @@
                         <figure>
                             <picture>
                                 <source srcset="media/picture_2.webp" media="screen and (min-width: 768px)">
-                                <img src="media/picture_2.webp" alt="Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field" height="360" loading="lazy">
+                                <img src="media/picture_2.webp" alt="Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field" height="480" loading="lazy">
                             </picture>
-                            <figcaption>Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field</figcaption>
+                            <figcaption>Aug 28, 2022. New York Mets vs. Colorado Rockies at Citi Field. Photo by Chia-Han Chen</figcaption>
                         </figure>
                     
                     </div>
@@ -300,7 +321,7 @@
                             <br>
                             <label for="message">Message:</label>
                             <br>
-                            <textarea id="message" placeholder="Enter your message"></textarea>
+                            <textarea id="message" placeholder="Enter your message" rows="10"></textarea>
                             <br>
                             <br>
                             <label>Upload Files: <input id="file_upload" type="file" name="file"></label>
@@ -318,9 +339,9 @@
             <div>
                 <h3>Connact</h3>
                 <hr>
-                <a class="contact_link" href="mailto:chc016@ucsd.edu">Email</a>
+                <a class="contact_link" href="mailto:chc016@ucsd.edu" title="chc016@ucsd.edu">Email</a>
                 <br>
-                <a class="contact_link" href="tel:206-953-5317">Phone</a>
+                <a class="contact_link" href="tel:206-953-5317" title="206-953-5317">Phone</a>
             </div>
 
             <br>
@@ -329,19 +350,19 @@
             <div>
                 <h3>Connect</h3>
                 <hr>
-                <a class="contact_link" href="https://www.linkedin.com/in/chia-han-chen-998745224/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a class="contact_link" href="https://www.linkedin.com/in/chia-han-chen-998745224/" target="_blank" rel="noopener noreferrer" title="https://www.linkedin.com/in/chia-han-chen-998745224/">LinkedIn</a>
                 <br>
-                <a class="contact_link" href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a class="contact_link" href="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=" target="_blank" rel="noopener noreferrer" title="https://instagram.com/chiahan.chen?igshid=YmMyMTA2M2Y=">Instagram</a>
                 <br>
-                <a class="contact_link" href="https://www.facebook.com/chen.chia.han.1019/" target="_blank" rel="noopener noreferrer">Facebook</a>
+                <a class="contact_link" href="https://www.facebook.com/chen.chia.han.1019/" target="_blank" rel="noopener noreferrer" title="https://www.facebook.com/chen.chia.han.1019/">Facebook</a>
             </div>
         </aside>
 
         <footer>
             <hr>
-            &copy; Created by Chia-Han Chen
+            &nbsp; &copy; Created by Chia-Han Chen
             <br>
-            Last Update: January 25 2023
+            &nbsp; Last Update: January 25 2023
         </footer>
 
         <script>

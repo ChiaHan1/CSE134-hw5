@@ -25,7 +25,6 @@ body {
 
 /* style for header */
 header {
-    text-align: center;
     grid-area: header;
     display: flex;
     flex-direction: row;
@@ -58,10 +57,18 @@ header h1 {
 
 header h1 a {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Brush Script MT";
     text-decoration: none;
     color: green;
     background-color: transparent;
+}
+
+header h1 a:hover {
+    background-color: green;
+    color: var(--navbar-background-color);
+    border-radius: 10px;
+    font-size: 50px;
+    padding: 6px;
 }
 
 @keyframes name {
@@ -83,6 +90,14 @@ header, #navbar, main, footer, #sidebar {
 }
 
 /* style for navbar */
+#hamburger_menu {
+    display: none;
+}
+
+#hamburger_navbar {
+    display: none;
+}
+
 #navbar {
     background-color: var(--navbar-background-color);
     padding: 1% 0 1% 0;
@@ -95,7 +110,7 @@ header, #navbar, main, footer, #sidebar {
     justify-content: space-around;
 }
 
-#navbar ul {
+#navbar ul, #hamburger_navbar ul {
     background-color: var(--navbar-background-color);
     list-style-type: none;
     display: flex;
@@ -109,7 +124,7 @@ header, #navbar, main, footer, #sidebar {
     padding-inline-start: 0;
 }
 
-#navbar ul li {
+#navbar ul li, #hamburger_navbar ul li {
     background-color: green;
     border: .2em green solid;
     border-radius: 1em;
@@ -117,7 +132,7 @@ header, #navbar, main, footer, #sidebar {
     margin: .3vh .2vw .3vh .2vw;
 }
 
-#navbar ul li a {
+#navbar ul li a, #hamburger_navbar ul li a {
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
@@ -131,22 +146,22 @@ header, #navbar, main, footer, #sidebar {
     color: var(--navbar-background-color);
 }
 
-#navbar ul li:hover {
+#navbar ul li:hover, #hamburger_navbar ul li:hover {
     background-color: var(--navbar-background-color);
 }
 
-#navbar ul li:hover > a {
+#navbar ul li:hover > a, #hamburger_navbar ul li:hover > a {
     background-color: transparent;
     color: green;
     font-weight: bold;
     text-decoration: underline;
 }
 
-#navbar ul li:active {
+#navbar ul li:active, #hamburger_navbar ul li:active {
     background-color: black;
 }
 
-#navbar ul li:active > a {
+#navbar ul li:active > a, #hamburger_navbar ul li:active > a {
     background-color: transparent;
     color: white;
 }
@@ -162,7 +177,12 @@ section {
 
 h2 {
     margin-block-end: 0;
-    color: darkgreen;
+    background-color: darkgreen;
+    color: var(--navbar-background-color);
+    padding: 8px;
+    border-radius: 10px;
+    font-family: Monospace;
+    font-size: 30px;
 }
 
 h3 {
@@ -170,6 +190,24 @@ h3 {
     color: darkgreen;
 }
 
+#education>div, #work>div, #volunteer>div {
+    border-radius: 10px;
+    border: 2px darkgreen double;
+    padding: 8px;
+}
+
+#education>div:hover, #work>div:hover, #volunteer>div:hover {
+    background-color: green;
+    color: white;
+}
+
+#education>div:hover > h3, #work>div:hover > h3, #volunteer>div:hover > h3 {
+    color: white;
+}
+
+.class {
+    font-family: monospace;
+}
 
 .job_description {
     display: inline-flex;
@@ -274,6 +312,14 @@ button {
     color: green;
 }
 
+label, legend {
+    color: darkgreen;
+}
+
+input, textarea {
+    color: darkgreen;
+}
+
 /* style for the sidebar */
 #sidebar {
     grid-area: sidebar;
@@ -300,7 +346,7 @@ footer {
         display: flex;
         flex-direction: column;
         position: static;
-        align-items: center;
+        align-items: flex-start;
         flex-wrap: wrap;
     }
 
@@ -317,27 +363,39 @@ footer {
         100% {left:0vw; top:0vh;cursor: progress;}
     }
 
-    #navbar {
-        justify-content: center;
-        justify-self: center;
+    #hamburger_menu {
+        display: inline;
+        margin-left: 7vw;
     }
 
-    #navbar ul {
+    #navbar {
+        display: none;
+    }
+
+    #hamburger_navbar {
+        display: none;
+        justify-content: center;
+        justify-self: center;
+        margin-left: 7vw;
+    }
+
+    #hamburger_navbar ul {
         display: flex;
         flex-direction: column;
+        width: 80vw;
         flex-wrap: nowrap;
         align-items: flex-start;
         justify-items: flex-start;
         justify-content: flex-start;
     }
 
-    #navbar li {
+    #hamburger_navbar li {
         text-align: center;
         width: 98%;
         margin: 0 1em 0 1em;
     }
 
-    #navbar ul li a {
+    #hamburger_navbar ul li a {
         margin: .8ex;
     }
 
@@ -417,6 +475,10 @@ footer {
 
     #navbar {
        display: none;
+    }
+
+    #hamburger_navbar {
+        display: none;
     }
 
     main {
