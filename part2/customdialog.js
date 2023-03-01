@@ -165,6 +165,15 @@ simple_prompt_btn.addEventListener ('click', () => {
             output_box.innerHTML = `User didn’t enter anything`;
         }
         else {
+            /**
+             * setup DOMPurify
+             */
+            const createDOMPurify = require('dompurify');
+            const { JSDOM } = require('jsdom');
+
+            const window = new JSDOM('').window;
+            const DOMPurify = createDOMPurify(window);
+
             output_box.innerHTML = `The value returned by the prompt method is: ${DOMPurify.sanitize (user_input.value)}`;
         }
         custom_dialog.close ();
