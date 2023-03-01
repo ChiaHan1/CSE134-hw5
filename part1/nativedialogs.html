@@ -4,6 +4,10 @@
     <head>
         <meta charset="UTF-8">
         <title>Simple Dialogs</title>
+<<<<<<< HEAD
+=======
+        <script src="../DOMPurify-3.0.0/dist/purify.js"></script>
+>>>>>>> parent of e1d2224... Update DOMPurify
     </head>
 
     <body>
@@ -58,15 +62,6 @@
             });
 
             simple_prompt_btn.addEventListener ('click', () => {
-                /**
-                 * setup DOMPurify
-                 */
-                const createDOMPurify = require('dompurify');
-                const { JSDOM } = require('jsdom');
-
-                const window = new JSDOM('').window;
-                const DOMPurify = createDOMPurify(window);
-
                 let user_input = DOMPurify.sanitize (prompt ('Enter your prompt'));
 
                 if (user_input == "" || user_input == null) {
