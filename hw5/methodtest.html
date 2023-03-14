@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Method Test</title>
+        <meta name="description" content="Method Test">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="methodtest.js" type="module"></script>
+        <style>
+            form {
+                border: 3px black double;
+                padding: 1%;
+                border-radius: 13px;
+            }
+
+            output {
+                white-space: pre;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <fieldset>
+                <legend>
+                    Form Information
+                </legend>
+
+                <label for="id">Record ID: </label>
+                <input type="number" id="id" name="id">
+
+                <br>
+
+                <label for="article_name">Article Name: </label>
+                <input type="text" id="article_name" name="article_name">
+
+                <br>
+
+                <label for="article_body">Article Body: </label>
+                <br>
+                <textarea id="article_body" name="article_body" cols="60" rows="10"></textarea>
+
+                <input type="hidden" id="date" name="date">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    Request Type
+                </legend>
+
+                <input type="radio" name="request" id="XMLHttpRequestRadio" value="XMLHttpRequest" checked>
+                <label for="XMLHttpRequestRadio">XMLHttpRequest</label>
+                <input type="radio" name="request" id="fetchRadio" value="fetch">
+                <label for="fetchRadio">Fetch</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    HTTP Methods
+                </legend>
+
+                <button type="button" id="postBtn">POST</button>
+                <button type="button" id="getBtn">GET</button>
+                <button type="button" id="putBtn">PUT</button>
+                <button type="button" id="deleteBtn">DELET</button>
+
+            </fieldset>
+        </form>
+
+        <br>
+        <output id="response"></output>
+    </body>
+
+</html>
