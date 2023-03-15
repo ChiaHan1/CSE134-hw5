@@ -39,13 +39,13 @@
             class ButtonCount extends React.Component {
                 constructor (props) {
                     super (props);
-                    this.state = { count: 0 };
+                    this.state = { times: 0 };
                 }
 
                 render () {
                     return (
-                        <button onClick={() => this.setState ({ count: this.state.count + 1 })}>
-                            Times Clicked: { this.state.count }
+                        <button onClick={() => this.setState ({ times: this.state.times + 1 })}>
+                            Times Clicked: { this.state.times }
                         </button>
                     );
                 }
